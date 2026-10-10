@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aayousha Malik | Portfolio</title>
+
+<style>
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fbf5f1;
+    color: #293443;
+}
+
+nav {
+    background: #20253d;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: #e4caff;
+}
+
+nav a {
+    color: #f7efff;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+nav a:hover { color: #e7a9c9; }
+
+.hero {
+    min-height: 330px;
+    padding: 65px 10%;
+    color: white;
+    background:
+      radial-gradient(ellipse at 80% 15%, #625080 0%, transparent 38%),
+      linear-gradient(120deg, #171c32, #35324f 65%, #584566);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-text { max-width: 540px; }
+
+.tag {
+    color: #e9b6dc;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 60px);
+    margin: 15px 0;
+}
+
+h1 span { color: #d5adff; }
+
+.hero p {
+    line-height: 1.8;
+    color: #e3ddec;
+}
+
+.hero-art {
+    width: 230px;
+    height: 245px;
+    border: 2px solid #b8a0d2;
+    border-radius: 120px 120px 25px 25px;
+    background:
+      linear-gradient(180deg, transparent, #20253d),
+      url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=80")
+      center/cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hero-art span {
+    padding: 12px;
+    color: white;
+    font-size: 13px;
+}
+
+main { padding: 35px 7%; }
+
+.top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+section { scroll-margin-top: 20px; }
+
+.panel {
+    padding: 28px;
+    border: 1px solid #e8dedb;
+    border-radius: 18px;
+    background: #fffdfa;
+    box-shadow: 0 5px 18px #2924430a;
+}
+
+.number {
+    color: #b783c5;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin: 10px 0;
+    color: #283c43;
+}
+
+p { line-height: 1.7; }
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #eee5f5;
+    color: #51426d;
+    border: 1px solid #e3d5ed;
+    border-radius: 25px;
+    padding: 12px 16px;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.project {
+    padding: 20px;
+    background: #fffaf8;
+    border: 1px solid #e8dedb;
+    border-radius: 14px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px #51426d15;
+}
+
+.project h3 { font-size: 16px; }
+
+.project p {
+    font-size: 13px;
+    color: #5f6670;
+}
+
+.badge {
+    display: inline-block;
+    background: #eee8f1;
+    padding: 5px 9px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin: 3px;
+}
+
+.contact-link {
+    color: #51426d;
+    overflow-wrap: anywhere;
+}
+
+.btn {
+    display: inline-block;
+    background: #34384f;
+    color: white;
+    padding: 13px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 12px;
+}
+
+.btn:hover { background: #765b8b; }
+
+footer {
+    background: #20253d;
+    color: #e6ddec;
+    padding: 25px;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    nav { justify-content: center; }
+    nav a { margin: 5px; }
+    .hero { padding: 45px 7%; }
+    .hero-art { display: none; }
+    .top-grid, .bottom-grid, .project-list {
+        grid-template-columns: 1fr;
+    }
+    main { padding: 22px 5%; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🦋 Aayousha Malik</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <div class="hero-text">
+        <div class="tag">HELLO, I'M A STUDENT DEVELOPER ♡</div>
+        <h1>Aayousha <span>Malik</span></h1>
+        <p>BS AI Student | Future Developer</p>
+        <p>"Small steps every day make<br>
+        big dreams come true."</p>
+    </div>
+
+    <div class="hero-art">
+        <span>✦ Keep learning ✦</span>
+    </div>
+</header>
+
+<main>
+    <div class="top-grid">
+
+        <section class="panel" id="about">
+            <div class="number">01 — ABOUT</div>
+            <h2>About Me ♡</h2>
+            <p>
+                Hello! I'm Aayousha Malik, a BS AI student
+                at BZU, Multan. I'm interested in programming,
+                problem solving and artificial intelligence.
+                I enjoy learning new technologies and creating
+                projects that turn ideas into reality.
+            </p>
+        </section>
+
+        <section class="panel" id="skills">
+            <div class="number">02 — MY TOOLKIT</div>
+            <h2>My Skills</h2>
+            <p>Technologies I'm learning and exploring.</p>
+            <div class="skills">
+                <span class="skill">〈/〉 HTML</span>
+                <span class="skill">✿ CSS</span>
+                <span class="skill">C++</span>
+                <span class="skill">🐍 Python</span>
+                <span class="skill">SQL</span>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="bottom-grid">
+
+        <section class="panel" id="projects">
+            <div class="number">03 — MY WORK</div>
+            <h2>Projects ✨</h2>
+            <p>Some ideas and projects I'm working on.</p>
+
+            <div class="project-list">
+                <article class="project">
+                    <h3>✧ AI Document Analyzer</h3>
+                    <p>A web app concept that highlights
+                    important points in documents using AI.</p>
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">AI</span>
+                </article>
+
+                <article class="project">
+                    <h3>✧ Student Freelance Agency</h3>
+                    <p>A platform idea connecting students
+                    with businesses for digital projects.</p>
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                </article>
+
+                <article class="project">
+                    <h3>✧ C++ Practice</h3>
+                    <p>Beginner programs to practise
+                    programming and problem solving.</p>
+                    <span class="badge">C++</span>
+                </article>
+
+                <article class="project">
+                    <h3>✧ My First Website</h3>
+                    <p>A personal portfolio built while
+                    learning web development.</p>
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel" id="contact">
+            <div class="number">04 — SAY HELLO</div>
+            <h2>Contact Me</h2>
+            <p>Let's connect and learn together! ♡</p>
+            <p>✉ <a class="contact-link"
+            href="mailto:aayoushamalik@gmail.com">
+            your-email@example.com</a></p>
+            <p>⌖ Multan, Pakistan</p>
+            <p>⌘ GitHub: add your profile link</p>
+            <a class="btn" href="mailto:aayoushamalik@gmail.com">
+                Get in Touch →
+            </a>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    🦋 © 2026 Aayousha Malik · Made with ♡ and curiosity
+</footer>
+
+</body>
+</html>
+
